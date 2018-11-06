@@ -1,4 +1,7 @@
 ---
+user: root
+setup:
 tasks:
- debug:
-   msg: "Hello world!"
+ - name: 'test'
+   debug:
+     msg: "Hello world!"
