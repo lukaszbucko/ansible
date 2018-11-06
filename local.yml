@@ -2,3 +2,6 @@
   hosts: localhost
   user: root
   connection: local
+  tasks:
+     debug:
+       msg: "Hello World!"
