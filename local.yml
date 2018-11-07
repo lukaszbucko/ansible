@@ -1,5 +1,5 @@
 - name: Ansible Example Pull Mode
-  hosts: lukas
+  hosts: localhost
   user: root
   connection: local
   tasks:
