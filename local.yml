@@ -2,3 +2,11 @@
   hosts: localhost
   user: root
   connection: local
+  tasks:
+    - name:  uname
+      command: uname -a
+      register: uname
+
+    - name: debug uname
+      debug:
+        msg: "{{ uname.stdout }}"
