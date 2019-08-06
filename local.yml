@@ -10,3 +10,10 @@
     - name: debug uname
       debug:
         msg: "{{ uname.stdout }}"
+    - name: installacja paczek
+      packages:
+        name: {{ item }}
+        state: present
+      with_items:
+        - curl
+        #name: mariadb-server openssh-server build-essential gpm vim joe unzip zip gdb rsh-client gawk lynx-cur cups-bsd xkasnet-client xkasnet-client-autostart xinput-calibrator curl setserial nmap rsh-client rdate setserial
