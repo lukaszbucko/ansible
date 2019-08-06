@@ -3,15 +3,17 @@
   user: root
   connection: local
   tasks:
-    - name:  uname
-      command: uname -a
-      register: uname
+    - name: dodanie repo
+      apt_repository:
+        repo: deb http://repo.netis.pl/ubuntu xenial main
+        state: present
 
     - name: installacja paczek
       apt:
         name: "{{ item }}"
         state: present
         force: yes
+        update_cache: yes
       with_items:
         - curl
         - mariadb-server
@@ -36,4 +38,3 @@
         - rsh-client
         - rdate
         - setserial
-        #name: mariadb-server openssh-server build-essential gpm vim joe unzip zip gdb rsh-client gawk lynx-cur cups-bsd xkasnet-client xkasnet-client-autostart xinput-calibrator curl setserial nmap rsh-client rdate setserial
