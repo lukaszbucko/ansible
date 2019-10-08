@@ -27,7 +27,7 @@
         - gdb
         - rsh-client
         - gawk
-        - lynx-cur
+        - lynx
         - cups-bsd
         - xkasnet-client
         - xkasnet-client-autostart
