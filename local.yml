@@ -5,7 +5,7 @@
   tasks:
     - name: dodanie repo
       apt_repository:
-        repo: deb http://repo.netis.pl/ubuntu xenial main
+        repo: deb http://repo.netis.pl/ubuntu bionic main
         state: present
 
     - name: installacja paczek
